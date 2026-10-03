@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>إدارة الطلاب</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="attendance-header">
+        <div class="back-home">
+    <button onclick="window.location.href='index.html'">
+        🏠 العودة للرئيسية
+    </button>
+</div>
+        <h1>👨‍🎓 إدارة الطلاب</h1>
+        <p>إضافة وتعديل وحذف بيانات الطلاب</p>
+    </header>
+
+    <main class="attendance-container">
+
+        <div class="student-form">
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="اكتب اسم الطالب"
+            >
+
+            <button onclick="addStudent()">
+                ➕ إضافة طالب
+            </button>
+
+        </div>
+
+        <div class="report-box">
+            <input
+                type="text"
+                id="studentSearch"
+                placeholder="🔎 البحث عن طالب..."
+            >
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>م</th>
+                        <th>اسم الطالب</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentsList">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+    <script src="students.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة الحضور والغياب</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>نظام إدارة الحضور والغياب</h1>
+        <p>إدارة الطلاب ورصد الحضور والغياب بسهولة</p>
+    </header>
+
+    <main>
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h2>👨‍🎓</h2>
+                <h3>الطلاب</h3>
+                <p>إدارة بيانات الطلاب</p>
+                <button onclick="window.location.href='students.html'">
+    عرض الطلاب
+</button>
+            </div>
+
+            <div class="card">
+                <h2>📅</h2>
+                <h3>الحضور والغياب</h3>
+                <p>تسجيل حضور وغياب الطلاب</p>
+             <button onclick="openAttendance()">رصد الغياب</button>            </div>
+
+            <div class="card">
+                <h2>📊</h2>
+                <h3>التقارير</h3>
+                <p>عرض تقارير الحضور والغياب</p>
+<button onclick="window.location.href='reports.html'">
+    عرض التقارير
+</button>            </div>
+
+            <div class="card">
+                <h2>📈</h2>
+                <h3>الإحصائيات</h3>
+                <p>متابعة نسب الحضور والغياب</p>
+                <button onclick="window.location.href='statistics.html'">
+    الإحصائيات
+</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>نظام إدارة الحضور والغياب © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تقارير الحضور والغياب</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="attendance-header">
+        <div class="back-home">
+    <button onclick="window.location.href='index.html'">
+        🏠 العودة للرئيسية
+    </button>
+</div>
+        <h1>📊 تقارير الحضور والغياب</h1>
+        <p>متابعة سجل حضور وغياب الطلاب</p>
+    </header>
+
+    <main class="attendance-container">
+
+        <div class="report-box">
+           
+            <h2>بحث عن طالب</h2>
+
+            <input
+                type="text"
+                id="reportSearch"
+                placeholder="اكتب اسم الطالب..."
+            >
+<button class="print-btn" onclick="window.print()">
+        🖨️ طباعة التقرير
+    </button>
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>م</th>
+                        <th>اسم الطالب</th>
+                        <th>أيام الحضور</th>
+                        <th>أيام الغياب</th>
+                        <th>إجمالي الأيام</th>
+                        <th>نسبة الحضور</th>
+                    </tr>
+                </thead>
+
+                <tbody id="reportsTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+    <script src="reports.js"></script>
+
+</body>
+
+</html>

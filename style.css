@@ -1,0 +1,548 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+}
+
+header {
+    background: #4f46e5;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+}
+/* ===== صفحة رصد الغياب ===== */
+
+.attendance-header {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    padding: 35px 20px;
+    text-align: center;
+    color: white;
+}
+
+.attendance-header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.attendance-container {
+    width: 94%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.top-bar {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.top-bar label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.top-bar input {
+    padding: 11px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.search-box input {
+    width: 260px;
+}
+
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+thead th {
+    background: #4f46e5;
+    color: white;
+    padding: 15px 10px;
+}
+
+tbody tr {
+    background: #f8fafc;
+    transition: 0.2s;
+}
+
+tbody tr:hover {
+    background: #eef2ff;
+}
+
+tbody td {
+    padding: 13px 10px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+tbody td:nth-child(2) {
+    text-align: right;
+    font-weight: 600;
+    min-width: 330px;
+}
+
+.present-btn,
+.absent-btn {
+    border: none;
+    padding: 9px 18px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    margin: 3px;
+    font-size: 14px;
+}
+
+.present-btn {
+    background: #16a34a;
+}
+
+.present-btn:hover {
+    background: #15803d;
+}
+
+.absent-btn {
+    background: #dc2626;
+}
+
+.absent-btn:hover {
+    background: #b91c1c;
+}
+
+.status {
+    font-weight: bold;
+    color: #777;
+    min-width: 130px;
+}
+
+@media (max-width: 700px) {
+
+    .top-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    tbody td:nth-child(2) {
+        min-width: 250px;
+    }
+}
+/* ===== إحصائيات الحضور ===== */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-card span {
+    font-size: 30px;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.stat-card small {
+    color: #777;
+    font-size: 14px;
+}
+
+.present-stat strong {
+    color: #16a34a;
+}
+
+.absent-stat strong {
+    color: #dc2626;
+}
+
+.pending-stat strong {
+    color: #d97706;
+}
+
+@media (max-width: 850px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+}
+.save-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.save-btn {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
+}
+
+.save-btn:hover {
+    background: #3730a3;
+    transform: translateY(-2px);
+}
+.report-box {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.report-box h2 {
+    margin-bottom: 15px;
+}
+
+#reportSearch {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.report-present {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.report-absent {
+    color: #dc2626;
+    font-weight: bold;
+}
+.student-form {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+
+    display: flex;
+    gap: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.student-form input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.student-form button {
+    background: #4f46e5;
+}
+
+.edit-btn {
+    background: #f59e0b;
+    margin: 3px;
+}
+
+.delete-btn {
+    background: #dc2626;
+    margin: 3px;
+}
+
+@media (max-width: 600px) {
+
+    .student-form {
+        flex-direction: column;
+    }
+
+    .student-form button {
+        width: 100%;
+    }
+}
+.back-home {
+    width: 90%;
+    max-width: 1100px;
+    margin: 15px auto 0;
+    text-align: right;
+}
+
+.back-home button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: 0.2s;
+}
+
+.back-home button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+/* تحسين شكل الجداول */
+
+.table-container {
+    width: 95%;
+    margin: 25px auto;
+    overflow-x: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+    background: white;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.table-container th {
+    background: #2563eb;
+    color: white;
+    padding: 15px 10px;
+    font-size: 15px;
+}
+
+.table-container td {
+    padding: 13px 10px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.table-container tbody tr {
+    transition: 0.2s;
+}
+
+.table-container tbody tr:hover {
+    background: #f8fafc;
+}
+
+.table-container tbody tr:last-child td {
+    border-bottom: none;
+}
+/* الشكل النهائي للجداول */
+
+.table-container {
+    width: 92%;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container th {
+    background: #1e40af !important;
+    color: #ffffff !important;
+    padding: 18px 12px !important;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.table-container td {
+    padding: 16px 12px !important;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+    background: #ffffff;
+    font-size: 15px;
+}
+
+.table-container tbody tr:hover td {
+    background: #eff6ff;
+}
+
+.table-container tbody tr:last-child td {
+    border-bottom: none;
+}
+.print-btn {
+    margin-top: 15px;
+    padding: 11px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #16a34a;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.print-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* إعدادات الطباعة */
+
+@media print {
+
+    .back-home,
+    .report-box,
+    .print-btn {
+        display: none !important;
+    }
+
+    .attendance-header {
+        box-shadow: none;
+    }
+
+    .table-container {
+        width: 100%;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .table-container th {
+        background: #1e40af !important;
+        color: white !important;
+    }
+
+    body {
+        background: white;
+    }
+}

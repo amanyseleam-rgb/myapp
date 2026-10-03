@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>رصد الحضور والغياب</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="attendance-header">
+        <div class="back-home">
+    <button onclick="window.location.href='index.html'">
+        🏠 العودة للرئيسية
+    </button>
+</div>
+        <h1>📋 رصد الحضور والغياب</h1>
+    
+    </header>
+
+    <main class="attendance-container">
+
+        <div class="top-bar">
+
+            <div>
+                <label for="date">📅 تاريخ الرصد</label>
+                <input type="date" id="date">
+            </div>
+
+            <div class="search-box">
+                <label for="search">🔎 بحث عن طالب</label>
+                <input type="text" id="search" placeholder="اكتب اسم الطالب...">
+            </div>
+
+        </div>
+        <div class="stats">
+
+    <div class="stat-card">
+        <span>👥</span>
+        <div>
+            <strong id="totalCount">21</strong>
+            <small>إجمالي الطلاب</small>
+        </div>
+    </div>
+
+    <div class="stat-card present-stat">
+        <span>🟢</span>
+        <div>
+            <strong id="presentCount">0</strong>
+            <small>حاضر</small>
+        </div>
+    </div>
+
+    <div class="stat-card absent-stat">
+        <span>🔴</span>
+        <div>
+            <strong id="absentCount">0</strong>
+            <small>غائب</small>
+        </div>
+    </div>
+
+    <div class="stat-card pending-stat">
+        <span>⏳</span>
+        <div>
+            <strong id="pendingCount">21</strong>
+            <small>لم يتم التسجيل</small>
+        </div>
+    </div>
+
+</div>
+<div class="save-section">
+    <button class="save-btn" onclick="saveAttendance()">
+        💾 حفظ رصد اليوم
+    </button>
+</div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>م</th>
+                        <th>اسم الطالب</th>
+                        <th>الحالة</th>
+                        <th>تسجيل</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentsTable">
+</tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

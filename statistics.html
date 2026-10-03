@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>إحصائيات الحضور والغياب</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="attendance-header">
+        <div class="back-home">
+    <button onclick="window.location.href='index.html'">
+        🏠 العودة للرئيسية
+    </button>
+</div>
+        <h1>📈 إحصائيات الحضور والغياب</h1>
+        <p>متابعة وتحليل مستوى حضور الطلاب</p>
+    </header>
+
+    <main class="attendance-container">
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <span>👥</span>
+                <div>
+                    <strong id="statisticsTotal">0</strong>
+                    <small>إجمالي الطلاب</small>
+                </div>
+            </div>
+
+            <div class="stat-card present-stat">
+                <span>🟢</span>
+                <div>
+                    <strong id="statisticsPresent">0</strong>
+                    <small>إجمالي الحضور</small>
+                </div>
+            </div>
+
+            <div class="stat-card absent-stat">
+                <span>🔴</span>
+                <div>
+                    <strong id="statisticsAbsent">0</strong>
+                    <small>إجمالي الغياب</small>
+                </div>
+            </div>
+
+            <div class="stat-card pending-stat">
+                <span>📊</span>
+                <div>
+                    <strong id="statisticsPercentage">0%</strong>
+                    <small>نسبة الحضور</small>
+                </div>
+            </div>
+
+        </div>
+<div class="statistics-chart">
+
+    <h2>📊 ملخص الحضور والغياب</h2>
+
+    <div class="chart-bars">
+
+        <div class="chart-item">
+            <div class="chart-label">
+                <span>🟢 الحضور</span>
+                <strong id="chartPresent">0</strong>
+            </div>
+
+            <div class="bar-background">
+                <div
+                    id="presentBar"
+                    class="bar present-bar">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="chart-item">
+            <div class="chart-label">
+                <span>🔴 الغياب</span>
+                <strong id="chartAbsent">0</strong>
+            </div>
+
+            <div class="bar-background">
+                <div
+                    id="absentBar"
+                    class="bar absent-bar">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+        <div class="report-box">
+
+            <h2>🔎 البحث عن طالب</h2>
+
+            <input
+                type="text"
+                id="statisticsSearch"
+                placeholder="اكتب اسم الطالب..."
+            >
+
+        </div>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>م</th>
+                        <th>اسم الطالب</th>
+                        <th>الحضور</th>
+                        <th>الغياب</th>
+                        <th>إجمالي الأيام</th>
+                        <th>نسبة الحضور</th>
+                    </tr>
+                </thead>
+
+                <tbody id="statisticsTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+    <script src="statistics.js"></script>
+
+</body>
+
+</html>
